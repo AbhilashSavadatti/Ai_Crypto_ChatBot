@@ -65,7 +65,7 @@ function ChatBot() {
             </div>
 <div className="p-10 gap-5 h-full flex flex-col justify-center items-center">
             <p className="text-2xl font-bold">Welcome to crypto chatbot</p>
-            <p className="text-gray-500">Inquire about market data</p>
+            <p className="text-gray-500">Inquire about the market data </p>
           </div>
           </div>
           
