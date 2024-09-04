@@ -25,7 +25,7 @@ export default function Home() {
     () => ({
       background: {
         color: {
-          value: "#2B2B52",
+          value: "#4C4B4B",
         },
       },
       fpsLimit: 120,

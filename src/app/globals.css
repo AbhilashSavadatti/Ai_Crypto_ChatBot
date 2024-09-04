@@ -35,6 +35,6 @@ body {
 
 .large-shadow{
   z-index: 1;
-  position: absolute;
+  
   box-shadow:0 0 300 rgb(157,0,255,0.496);
 }
