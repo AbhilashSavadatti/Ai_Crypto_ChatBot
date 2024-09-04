@@ -1,5 +1,5 @@
-"use client"
-import Image from "next/image";
+"use client";
+
 import ChatBot from "./components/ChatBot";
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
@@ -10,9 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-    
       await loadSlim(engine);
-
     }).then(() => {
       setInit(true);
     });
@@ -21,6 +19,7 @@ export default function Home() {
   const particlesLoaded = (container) => {
     console.log(container);
   };
+
   const options = useMemo(
     () => ({
       background: {
@@ -89,15 +88,19 @@ export default function Home() {
       },
       detectRetina: true,
     }),
-    [],
+    []
   );
+
   return (
-    <main className="flex h-screen flex-col items-center justify-center ">
-      <ChatBot/>
+    <main className="flex flex-col items-center justify-center h-screen p-4 sm:p-8 lg:p-16">
+      <div className="w-full max-w-md lg:max-w-xl">
+        <ChatBot />
+      </div>
       <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
+        className="absolute inset-0 -z-10"
       />
     </main>
   );
